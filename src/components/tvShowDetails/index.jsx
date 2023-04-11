@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Drawer from "@mui/material/Drawer";
-import MovieReviews from '../movieReviews'
+import TvShowReviews from '../TvShowReviews'
 
 const styles = {
   chipSet: {
@@ -30,8 +30,8 @@ const styles = {
   },
 };
 
-const MovieDetails = ( {movie}) => {
-  const [drawerOpen, setDrawerOpen] = useState(false); 
+const TvShowDetails = ({ tvShow }) => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <>
@@ -40,44 +40,45 @@ const MovieDetails = ( {movie}) => {
       </Typography>
 
       <Typography variant="h6" component="p">
-        {movie.overview}
+        {tvShow.overview}
       </Typography>
 
       <Paper component="ul" sx={styles.chipSet}>
         <li>
           <Chip label="Genres" sx={styles.chipLabel} color="primary" />
         </li>
-        {movie.genres.map((g) => (
+        {tvShow.genres.map((g) => (
           <li key={g.name}>
             <Chip label={g.name}  />
           </li>
         ))}
       </Paper>
       <Paper component="ul" sx={styles.chipSet}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${tvShow.episode_run_time[0]} min.`} />
         <Chip
           icon={<MonetizationIcon />}
-          label={`${movie.revenue.toLocaleString()}`}
+          label={`${tvShow.status}`}
         />
         <Chip
           icon={<StarRate />}
-          label={`${movie.vote_average} (${movie.vote_count}`}
+          label={`${tvShow.vote_average} (${tvShow.vote_count}`}
         />
-        <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`First aired: ${tvShow.first_air_date}`} />
       </Paper>
       <Fab    
         color="secondary"
         variant="extended"
-        onClick={() =>setDrawerOpen(true)}
+        onClick={() => setDrawerOpen(true)}
         sx={styles.fab}
       >
         <NavigationIcon />
         Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <MovieReviews movie={movie} />
+        <TvShowReviews tvShow={tvShow} />
       </Drawer>
     </>
   );
 };
-export default  MovieDetails ;
+
+export default TvShowDetails;

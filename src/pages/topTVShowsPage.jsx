@@ -1,5 +1,5 @@
 import React from "react";
-import PageTemplate from "../components/templateMovieListPage";
+import PageTemplate from "../components/templateTVListPage";
 import { useQuery } from "react-query";
 import { getTopRatedTVShows } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
@@ -19,11 +19,12 @@ const TopRatedTVShowsPage = () => {
   }
 
   const tvShows = data.results;
+  console.log(tvShows)
 
   return (
     <PageTemplate
       title="Top Rated TV Shows"
-      movies={tvShows}
+      tvShow={tvShows}
     />
   );
 };

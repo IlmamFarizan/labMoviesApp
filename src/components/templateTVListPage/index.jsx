@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../headerMovieList";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import MovieList from "../movieList";
+import TVList from "../tvList";
 
 const styles = {
   root: { 
@@ -24,16 +24,16 @@ const styles = {
   },
 };
 
-function MovieListPageTemplate({ movies, title, action, actors }) {
+function TVListPageTemplate({ tvShow, title, action, actors }) {
   const Box = () => {
-    if (movies) {
+    if (tvShow) {
       return (
         <Grid container sx={styles.root}>
           <Grid item xs={12}>
             <Header title={title} />
           </Grid>
           <Grid item container spacing={5}>
-            <MovieList action={action} movies={movies} />
+            <TVList action={action} tvShow={tvShow} />
           </Grid>
         </Grid>
       );
@@ -79,4 +79,4 @@ function MovieListPageTemplate({ movies, title, action, actors }) {
   };
   return <Box />;
 }
-export default MovieListPageTemplate;
+export default TVListPageTemplate;

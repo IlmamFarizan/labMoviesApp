@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import TVShowDetails from "../components/tvShowDetails";
-import PageTemplate from "../components/templateTVShowPage";
+import PageTemplate from "../components/templateTVPage";
 import { getTVShow } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
@@ -21,6 +21,8 @@ const TVShowDetailsPage = () => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+
+  console.log("zxc", tvShow);
 
   return (
     <>

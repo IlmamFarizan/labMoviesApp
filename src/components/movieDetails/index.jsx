@@ -35,7 +35,7 @@ const MovieDetails = ( {movie}) => {
 
   return (
     <>
-      <Typography variant="h5" component="h3">
+      <Typography variant="h5" component="h3" sx={{ marginBottom: '1rem' }}>
         Overview
       </Typography>
 
@@ -45,25 +45,29 @@ const MovieDetails = ( {movie}) => {
 
       <Paper component="ul" sx={styles.chipSet}>
         <li>
-          <Chip label="Genres" sx={styles.chipLabel} color="primary" />
+          <Chip label="Genres" sx={[styles.chipLabel, {margin:1}]} />
         </li>
         {movie.genres.map((g) => (
           <li key={g.name}>
-            <Chip label={g.name}  />
+            <Chip label={g.name} sx={{margin:1}}/>
           </li>
         ))}
       </Paper>
       <Paper component="ul" sx={styles.chipSet}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} sx={{margin:1}}/>
         <Chip
           icon={<MonetizationIcon />}
-          label={`${movie.revenue.toLocaleString()}`}
+          label={`Revenue: $${movie.revenue.toLocaleString()}`} sx={{margin:1}}
         />
         <Chip
           icon={<StarRate />}
-          label={`${movie.vote_average} (${movie.vote_count}`}
+          label={`Rating: ${movie.vote_average} (${movie.vote_count} votes)`} sx={{margin:1}}
         />
-        <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`Released: ${movie.release_date}`} sx={{margin:1}}/>
+        <Chip label={`Language: ${movie.original_language}`} sx={{margin:1}}/>
+        <Chip label={`Production Companies: ${movie.production_companies.map((company) => company.name).join(", ")}`} sx={{margin:1}}/>
+        <Chip label={`Budget: $${movie.budget.toLocaleString()}`} sx={{margin:1}}/>
+        <Chip label={`Status: ${movie.status}`} sx={{margin:1}}/>
       </Paper>
       <Fab    
         color="secondary"

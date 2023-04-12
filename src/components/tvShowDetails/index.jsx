@@ -8,7 +8,8 @@ import Typography from "@mui/material/Typography";
 import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Drawer from "@mui/material/Drawer";
-import TvShowReviews from '../TvShowReviews'
+import { CardMedia } from "@mui/material";
+import TVReviews from "../tvShowReviews";
 
 const styles = {
   chipSet: {
@@ -28,6 +29,7 @@ const styles = {
     top: 50,
     right: 2,
   },
+  media: { height: 500 },
 };
 
 const TvShowDetails = ({ tvShow }) => {
@@ -71,11 +73,11 @@ const TvShowDetails = ({ tvShow }) => {
         onClick={() => setDrawerOpen(true)}
         sx={styles.fab}
       >
-        <NavigationIcon />
+      <NavigationIcon />
         Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <TvShowReviews tvShow={tvShow} />
+        <TVReviews tvShow={tvShow} />
       </Drawer>
     </>
   );

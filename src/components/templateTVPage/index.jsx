@@ -1,11 +1,11 @@
-import React from "react"; 
-import MovieHeader from "../headerMovie";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { getMovieImages } from "../../api/tmdb-api";
+import { getTVImages, getTVShow } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import TVCard from "../tvShowCard";
 
 const styles = {
   gridListRoot: {
@@ -19,41 +19,37 @@ const styles = {
   },
 };
 
-const TemplateMoviePage = ({ movie, children }) => {
-  const { data , error, isLoading, isError } = useQuery(
-    ["images", { id: movie.id }],
-    getMovieImages,
-  );
+const TemplateTVPage = ({ tvShow, children }) => {
+//     const { data , error, isLoading, isError } = useQuery(
+//         ["images", { id: tvShow.id }],
+//         getTVImages,
+//       );
 
-  if (isLoading) {
-    return <Spinner />;
-  }
+//   if (isLoading) {
+//     return <Spinner />;
+//   }
 
-  if (isError) {
-    return <h1>{error.message}</h1>;
-  }
-  const images = data.posters
+//   if (isError) {
+//     return <h1>{error.message}</h1>;
+//   }
+
+//   console.log("asd", tvShow);
 
   return (
     <>
-      <MovieHeader movie={movie} />
-
       <Grid container spacing={5} style={{ padding: "15px" }}>
         <Grid item xs={3}>
           <div sx={styles.gridListRoot}>
             <ImageList cols={1}>
-              {images.map((image) => (
                 <ImageListItem
-                  key={image.file_path}
                   sx={styles.gridListTile}
                   cols={1}
                 >
                   <img
-                    src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
-                    alt={image.poster_path}
+                    src={`https://image.tmdb.org/t/p/w500${tvShow.poster_path}`}
+                    alt={tvShow.poster_path}
                   />
                 </ImageListItem>
-              ))}
             </ImageList>
           </div>
         </Grid>
@@ -66,4 +62,4 @@ const TemplateMoviePage = ({ movie, children }) => {
   );
 };
 
-export default TemplateMoviePage;
+export default TemplateTVPage;

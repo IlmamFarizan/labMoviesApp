@@ -62,15 +62,15 @@ __Name:__ Ilmam Farizan Auric
 
 ## Storybook.
 
-![][image8]
+![](image8.png)
 
-![][image9]
+![](image9.png)
 
-![][image10]
+![](image10.png)
 
-![][image11]
+![](image11.png)
 
-![][image12]
+![](image12.png)
 
 ## Authentication.
 

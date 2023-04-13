@@ -4,23 +4,25 @@ __Name:__ Ilmam Farizan Auric
 
 ## Overview.
 
-[A bullet-point list of the features developed for the React SPA app (new/modified ones only for the Movies app),]
-
-+ Feature X.
-+ Feature Y. 
-+ etc.
++ Added Add to Playlist button and show Playlist icon in Upcoming Movies page
++ Added more properties in the movie details page
++ Added more API functions
++ Added Most Popular Movies page
++ Added Top Rated Movies page
++ Added Top Actors page
++ Added Top Rated TV Shows page
++ Added a separate components for TV Shows
++ Added TV Show Details page
++ Updated Storybook
 
 ## Feature Design.
 
-[ For each feature listed in the overview, show a screenshot(s) of its UI layout (use appropriate magnification for accessibility). Include captions with the images.]
-
-e.g. 
 
 #### The Upcoming Movies feature.
 
 > Lists movies from the Upcoming movies endpoint of TMDB
 
-![][image1]
+![][UpcomingFeature]
 
 #### Movies Reviews feature.
 

@@ -19,7 +19,6 @@ const TopRatedTVShowsPage = () => {
   }
 
   const tvShows = data.results;
-  console.log(tvShows)
 
   return (
     <PageTemplate

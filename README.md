@@ -22,43 +22,43 @@ __Name:__ Ilmam Farizan Auric
 
 > Lists movies from the Upcoming movies endpoint of TMDB
 
-![][image1]
+![](image1.png)
 
 #### Movie Details feature.
 
 > Shows more information on the movie details page.
 
-![][image2]
+![](image2.png)
 
 #### Popular Movies feature.
 
 > Shows Popular Movies lists on the Popular Movies page.
 
-![][image3]
+![](image3.png)
 
 #### Top Rated Movies feature.
 
 > Shows Top Rated Movies lists on the Top Rated Movies page.
 
-![][image4]
+![](image4.png)
 
 #### Top Actors feature.
 
 > Shows Top Actors lists on the Top Actors page.
 
-![][image5]
+![](image5.png)
 
 #### Top Rated TV Show feature.
 
 > Shows Top Rated TV Show lists on the Top Rated TV Show page.
 
-![][image6]
+![](image6.png)
 
 #### TV Show Details feature.
 
 > Shows Top Rated TV Show Details on the Top Rated TV Show Details page.
 
-![][image7]
+![](image7.png)
 
 ## Storybook.
 

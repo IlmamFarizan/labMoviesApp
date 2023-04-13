@@ -22,7 +22,7 @@ __Name:__ Ilmam Farizan Auric
 
 > Lists movies from the Upcoming movies endpoint of TMDB
 
-![][image1.png]
+![][image1]
 
 #### Movie Details feature.
 

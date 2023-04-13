@@ -24,65 +24,63 @@ __Name:__ Ilmam Farizan Auric
 
 ![][image1]
 
-#### Movies Reviews feature.
+#### Movie Details feature.
 
-> Lists all the reviews for a particular movie (text extract only).
+> Shows more information on the movie details page.
 
 ![][image2]
 
-> Click the 'Full Review' link of an entry in the above list to show the full text of a review. 
+#### Popular Movies feature.
+
+> Shows Popular Movies lists on the Popular Movies page.
 
 ![][image3]
 
-.... other features .......
+#### Top Rated Movies feature.
 
-## Storybook.
+> Shows Top Rated Movies lists on the Top Rated Movies page.
 
-[ Include a screenshot(s) from the Storybook UI and highlight the stories for new components developed.]
+![][image4]
 
-e.g.
+#### Top Actors feature.
+
+> Shows Top Actors lists on the Top Actors page.
 
 ![][image5]
 
+#### Top Rated TV Show feature.
+
+> Shows Top Rated TV Show lists on the Top Rated TV Show page.
+
+![][image6]
+
+#### TV Show Details feature.
+
+> Shows Top Rated TV Show Details on the Top Rated TV Show Details page.
+
+![][image7]
+
+## Storybook.
+
+![][image8]
+
+![][image9]
+
+![][image10]
+
+![][image11]
+
+![][image12]
+
 ## Authentication.
 
-[ List all the routes in your app and highlight those that are protected/private (require authentication).]
-
-e.g.
-
-+ /movies - List of 20  movies from the Discover endpoint,
++ /movies - List of 20 movies from the Discover endpoint.
 + /movies/{movie_id} - Detailed information on a specific movie.
 + /reviews/{review_id} (Protected) - The full text of a movie review.
-+ /movie/{movie_id}/similar - A list of similar movies. 
-+ /person/{person_id} (Protected) - A specific actor's bio.
-+ etc
-+ etc
-
-#### Protected features (if relevant)
-
-[ Briefly state other areas where you used authentication in the app, for example, to protect access to functionality, e.g. only authenticated users can 'favourite' a movie.]
-
-#### Supabase (if relevant)
-
-[ Include a screenshot(s) from your Supabase account that verifies its use for this app. ]
-
-## Deployment (if relevant).
-
-[ Specify the URL of your deployed app and include a screenshot(s) from your deployment platform (e.g. Vercal) account that verifies its use for this app. Have a preregistered user for your app and specify their credentials.
-
-Username: test1 ; Password: pass1
-]
-
-## Persistence (if relevant).
-
-[ If you are persisting data to the Supabase backend, e.g. favourite movies, fantasy movie, include screenshots with appropriate captions to verify this aspect. ]
-
-## Additional Information.
-
-[ Briefly explain any other aspects of your app's design or implementation that is non-standard and worthy of mention.]
-
-[image1]: ./images/image1.png
-[image2]: ./images/image2.png
-[image3]: ./images/image3.png
-[image4]: ./images/image4.png
-[image5]: ./images/image5.png
++ /movies/favourites - Display favourited movies.
++ /person/popular - Retrive top actors list.
++ /reviews/form - Display movie review form.
++ /movies/upcoming - Display upcoming movies.
++ /movies/top_rated - Display top rated movies.
++ /tv/top_rated - Retreive top rated tv shows.
++ /tv/:id - Detailed information on a specific tv show.
